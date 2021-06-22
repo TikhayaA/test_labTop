@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Reg.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Light.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Xbold.otf');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Black.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+$bgdark: #233148;
+$bglight: #EAEFF5;
+$bgsecondary: #1F65D9;
+$light: #FFFFFF;
+$secondary: #8796AE;
+$bgBtn: #FCCF18;
+
+@mixin before {
+    position: absolute;
+    content: "";
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Proxima Nova', sans-serif;
+    color: $light;
+}
+.container{
+    width: 1172px;
+    margin: auto;
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+        width:calc(100% - 200px);
+    }
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        width:calc(100% - 59px);
+    }
+}
+
+.anim-show{
+    opacity: 0;
+    transform: translate(0, 60%);
+    -webkit-transform: translate(0, 60%);
+    -moz-transform: translate(0, 60%);
+    -ms-transform: translate(0, 60%);
+    -o-transform: translate(0, 60%);
+    transition: all 0.8s ease 0s;
+    -webkit-transition: all 0.8s ease 0s;
+    -moz-transition: all 0.8s ease 0s;
+    -ms-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    &._active
+{
+        transform: translate(0,0);
+        -webkit-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        -ms-transform: translate(0,0);
+        -o-transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@import"service-wrap.scss";
+@import"service-item.scss";
+@import"products-wrap.scss";
+@import"section-title.scss";
+@import"documents.scss";
+@import"btn-download.scss";
