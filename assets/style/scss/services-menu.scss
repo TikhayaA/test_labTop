@@ -1,0 +1,240 @@
+.services-menu{
+    width: 50.17%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-right: 1px solid #D8D8DA;
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px -2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px -2px rgba(34, 60, 80, 0.2);
+
+    @media all and (max-width: 768px) {
+        width: 90%;
+    }
+
+    @media all and (max-width: 500px) {
+        width: 100%;
+    }
+
+    &:hover {
+        @media all and (min-width: 768px) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    &_list{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+    }
+    &_list-item{
+        @media all and (min-width: 768px) {
+            height: 88px;
+        }
+        &:hover{
+            width: calc(100% + 16px);
+            margin-left: -8px;
+            background: $corpColore;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            @media all and (max-width: 768px) {
+                width: 100%;
+                margin-left: 0;
+                border: 1px solid #D8D8DA;
+                box-sizing: border-box;
+                border-radius: 0px 0px 10px 10px;
+                box-shadow: unset;
+            }
+            .services-menu {
+                border: none;
+            }
+            .services-menu_link{
+                color: #FFFFFF;
+                height: 88px;
+                box-sizing: border-box;
+                @media all and (max-width: 768px) {
+                    height: auto;
+                }
+                @media all and (max-width: 768px) {
+                    svg:last-child {
+                        margin-right: 12px;
+                    }
+                }
+            }
+            .services-menu_logo-list{
+                path{
+                    fill: #FFFFFF;
+                }
+            }
+            .services-menu_arrow-list{
+                path{
+                    stroke: white;
+                }
+                @media all and (max-width: 768px) {
+                    transform: rotate(90deg);
+                    -webkit-transform: rotate(-90deg);
+                    -moz-transform: rotate(-90deg);
+                    -ms-transform: rotate(-90deg);
+                    -o-transform: rotate(-90deg);
+                }
+            }
+            .services-menu_submenu {
+                display: block;
+                opacity: 1;
+                border-radius: 8px;
+            }
+        }
+    }
+    &_link{
+        font-size: 24px;
+        color: $Graphit_Imaris;
+        text-decoration: none;
+        font-family: 'Roboto';
+        display: flex;
+        align-items: center;
+        padding: 24px 24px 23px 24px;
+        position: relative;
+        z-index:12;
+        font-weight: bold;
+        @media all and (max-width: 768px) {
+            font-size: 14px;
+            padding: 8px 24px 8px 24px;
+        }
+        span {
+            width: 87%;
+        }
+    }
+    &_logo-list{
+        path{
+            fill: $corpColore;
+        }
+        padding-right: 12px;
+    }
+    &_submenu {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        -webkit-box-shadow: 0px 5px 10px -2px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 5px 10px -2px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 5px 10px -2px rgba(34, 60, 80, 0.2);
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        background: #FFFFFF;
+        padding: 20px;
+        padding-left: 49px;
+        box-sizing: border-box;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        display: none;
+        transition: all 2s;
+        -webkit-transition: all 2s;
+        -moz-transition: all 2s;
+        -ms-transition: all 2s;
+        -o-transition: all 2s;
+
+        @media all and (max-width: 768px) {
+            position: static;
+            box-shadow: unset;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            padding-left: 29px;
+        }
+
+        ul {
+            li {
+                a {
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 40px;
+                    color: $Graphit_Imaris;
+                    text-decoration: none;
+                    position: relative;
+                    @media all and (max-width: 768px) {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        background: $Graphit_Imaris;
+                        position: absolute;
+                        top: 50%;
+                        left: -15px;
+                        transform: translate(0, -50%);
+                        -webkit-transform: translate(0, -50%);
+                        -moz-transform: translate(0, -50%);
+                        -ms-transform: translate(0, -50%);
+                        -o-transform: translate(0, -50%);
+}
+                    &:hover {
+                        color: $corpColore;
+                        &:before{
+                            background: $corpColore;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-arrow {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            a{
+                @media all and (max-width: 768px){
+                    display: flex;
+                }
+            }
+            @media all and (max-width: 768px) {
+                position: static;
+                margin-top: 10px;
+                justify-content: flex-end;
+            }
+
+            svg {
+                margin-left: 10px;
+                @media all and (max-width: 768px) {
+                    width: 28px;
+                }
+            }
+
+            a {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 120%;
+                color: #FF5C39;
+                text-decoration: none;
+                @media all and (max-width: 768px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
